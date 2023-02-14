@@ -1,0 +1,86 @@
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+	background: linear-gradient(to bottom right, #4db7fd, #2294ba, #003399);
+	background-size: 300% 300%;
+	animation: shimmer 8s ease infinite;
+  height: 100vh;
+}
+
+@keyframes shimmer {
+	0% {
+		background-position: 0% 50%;
+	}
+  50% {
+    background-position: 100% 50%;
+  }
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+nav {
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  justify-content: space-evenly;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 20px 20px;
+  flex-grow: 1;
+}
+
+header {
+  text-align: center;
+  margin-top: 0.5%;
+}
+
+h1 {
+	font-size: 48px;
+	font-weight: bold;
+}
+
+section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+section h2 {
+  font-size: 2em;
+}
+
+section p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+section ul {
+  list-style: none;
+  padding: 0;
+}
+
+section ul li {
+  margin-bottom: 0.5em;
+}
+

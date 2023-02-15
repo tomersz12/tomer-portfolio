@@ -33,6 +33,10 @@ nav {
   left: 0;
 }
 
+nav heading {
+  color: white;
+  font-size: 1.5em;
+}
 nav ul {
   display: flex;
 }
@@ -57,10 +61,6 @@ nav ul li a.active {
   color:grey;
 }
 
-header {
-  text-align: center;
-}
-
 h1 {
 	font-size: 3em;
 	font-weight: bold;
@@ -73,19 +73,37 @@ h2 {
 p {
   font-size: 1.2em;
   line-height: 1.5em;
+  margin: 0 0;
 }
 
 section {
-  max-width: 60em;
-  margin: 0 auto;
-  padding: 2em;
+  max-width: 70em;
+  margin: auto auto;
+  padding: 6em;
+  align-items: center;
+}
+
+section header {
+  padding-bottom: 1em;
+}
+
+section header img {
+  height: 15em;
+  width: 15em;
+  float: left;
+  padding-right: 1em;
+}
+
+section header headertext {
+  position: relative;
 }
 
 section ul {
-  list-style: none;
+  list-style: circle;
   padding: 0;
 }
 
 section ul li {
+  font-size: 1.2em;
   margin-bottom: 0.5em;
 }

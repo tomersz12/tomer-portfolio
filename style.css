@@ -80,18 +80,19 @@ section {
   max-width: 70em;
   margin: auto auto;
   padding: 6em;
-  align-items: center;
 }
 
 section header {
   padding-bottom: 1em;
+  align-items: center;
+  display: flex;
 }
 
 section header img {
   height: 15em;
   width: 15em;
   float: left;
-  padding-right: 1em;
+  padding-right: 1.5em;
 }
 
 section header headertext {

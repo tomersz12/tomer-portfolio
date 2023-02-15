@@ -1,4 +1,4 @@
-html {
+* {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -24,7 +24,7 @@ body {
 nav {
   background-color: rgba(0,0,0,0.5);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   position: fixed;
   z-index: 1;
@@ -34,8 +34,11 @@ nav {
 }
 
 nav ul {
-  list-style: none;
   display: flex;
+}
+
+nav ul li {
+  list-style: none;
 }
 
 nav ul li a {
@@ -44,6 +47,14 @@ nav ul li a {
   font-size: 1.5em;
   padding: 1em 1em;
   flex-grow: 1;
+}
+
+nav ul li a:hover {
+  color:grey;
+}
+
+nav ul li a.active {
+  color:grey;
 }
 
 header {
@@ -78,4 +89,3 @@ section ul {
 section ul li {
   margin-bottom: 0.5em;
 }
-

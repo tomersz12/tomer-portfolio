@@ -119,3 +119,11 @@ section ul li a {
 section ul li a:hover {
   font-weight: bold;
 }
+
+section a img {
+  height: 7.5em;
+  width: 7.5em;
+  padding-right: 1em;
+  display: block;
+  float: left;
+}

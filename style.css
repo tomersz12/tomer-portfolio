@@ -64,7 +64,8 @@ nav ul li a.active {
 
 h1 {
 	font-size: 3em;
-	font-weight: bold;
+  margin: auto;
+  padding-bottom: 0.2em;
 }
 
 h2 {
@@ -96,7 +97,7 @@ section header img {
   padding-right: 1.5em;
 }
 
-section header headertext {
+section header imgtext {
   position: relative;
   bottom: 2em;
 }

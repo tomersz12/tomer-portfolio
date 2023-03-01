@@ -72,6 +72,10 @@ h2 {
   font-size: 2em;
 }
 
+h3 {
+  font-size: 1.2em;
+}
+
 p {
   font-size: 1.2em;
   line-height: 1.5em;
@@ -127,4 +131,25 @@ section a img {
   padding-right: 1em;
   display: block;
   float: left;
+}
+
+project {
+  padding-bottom: 1em;
+  align-items: center;
+  display: flex;
+}
+
+project a img {
+  height: 7.5em;
+  width: 7.5em;
+  float: left;
+}
+
+project imgtext {
+  position: relative;
+  padding-left: 0.5em;
+}
+
+project imgtext ul {
+  padding-left: 1em;
 }

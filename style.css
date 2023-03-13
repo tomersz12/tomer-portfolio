@@ -33,7 +33,7 @@ nav {
   left: 0;
 }
 
-nav heading {
+nav header {
   color: white;
   font-size: 1.5em;
 }
@@ -152,4 +152,12 @@ project imgtext {
 
 project imgtext ul {
   padding-left: 1em;
+}
+
+section iframe {
+  width: 56em;
+  height: 31.5em;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }

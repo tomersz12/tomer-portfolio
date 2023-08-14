@@ -1,20 +1,20 @@
 import { useState, useEffect, useRef } from 'react';
 
 const interests = [
-    "programming",
-    "soccer",
-    "creating",
-    "comic books",
-    "learning",
-    "making a difference",
-    "writing",
-    "traveling",
-    "cinema",
-    "doing things myself",
-    "board games",
-    "video editing",
-    "sushi",
-]
+    "Creating",
+    "Learning",
+    "Making a difference",
+    "Writing",
+    "Traveling",
+    "Cinema",
+    "Programming",
+    "Soccer",
+    "Comic books",
+    "Doing things myself",
+    "Board games",
+    "Video editing",
+    "Sushi"
+];
 
 const Hero = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -33,7 +33,7 @@ const Hero = () => {
                     setCurrentLetterIndex(0);
                     setCurrentIndex((currentIndex + 1) % interests.length);
                 }
-            }, 10);
+            }, Math.floor(Math.random() * 10)+5);
 
             return () => clearInterval(interval);
         } else {
@@ -45,9 +45,9 @@ const Hero = () => {
                     setTimeout(() => {
                         setIsReversing(true);
                         clearInterval(interval);
-                    }, 750);
+                    }, Math.floor(Math.random() * 100) + 700);
                 }
-            }, 50);
+            }, Math.floor(Math.random() * 75) + 25);
 
             return () => clearInterval(interval);
         }
@@ -68,6 +68,7 @@ const Hero = () => {
     useEffect(() => {
         window.addEventListener('mousemove', handleOnMove);
         window.addEventListener('touchmove', handleOnMove);
+        leftSideRef.current!.style.width = `${27}%`;
     
         return () => {
             window.removeEventListener('mousemove', handleOnMove);

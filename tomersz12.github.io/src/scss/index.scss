@@ -1,0 +1,56 @@
+$text: #f2f6fc;
+$background: #020408;
+$primary: #6699fc;
+$secondary: #060c19;
+$accent: #2a5cc0;
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Geologica:wght@500&family=Syne&display=swap');
+$body-font: 'Syne', sans-serif;
+$header-font: 'Geologica', sans-serif;
+$fancy-font: 'Bungee', sans-serif;
+
+body {
+    background-color: $background;
+    color: $text;
+    font-family: $body-font;
+    margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $header-font;
+    font-weight: 500;
+}
+
+.hero {
+    height: 90vh;
+    .side {
+        height: 90vh;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        position: absolute;
+        .side-text {
+            font-size: 3vw;
+            margin: 0px 25vw;
+            width: 75vw;
+            .fancy {
+                font-family: $fancy-font;
+                font-size: 5vw;
+            }
+        }
+    }
+    #left-side {
+        transition: all 0.075s ease-in-out;
+        background-color: $primary;
+        z-index: 2;
+        .fancy {
+            color: $background;
+        }
+    }
+    #right-side {
+        .fancy {
+            color: $primary;
+        }
+    }
+}

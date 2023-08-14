@@ -7,13 +7,15 @@ const interests = [
     "Writing",
     "Traveling",
     "Cinema",
+	"Volunteering",
     "Programming",
     "Soccer",
     "Comic books",
     "Doing things myself",
+	"Accounting",
     "Board games",
     "Video editing",
-    "Sushi"
+    "Sushi",
 ];
 
 const Hero = () => {

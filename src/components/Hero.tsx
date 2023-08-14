@@ -11,6 +11,7 @@ const interests = [
     "Programming",
     "Soccer",
     "Comic books",
+	"Event Planning",
     "Doing things myself",
 	"Accounting",
     "Board games",

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 import Headshot from '../images/headshot.jpg';
-import AlternatingText from './AlternatingText';
 
 const About = () => {
     const [isGlitching, setIsGlitching] = useState(false);

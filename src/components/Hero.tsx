@@ -12,12 +12,13 @@ const interests = [
     "Soccer",
     "Comic books",
 	"Event Planning",
-    "Doing things myself",
+    "Doing things my way",
 	"Accounting",
     "Board games",
     "Video editing",
     "Sushi",
-];
+    "Philosophy",
+].sort(() => Math.random() - 0.5);
 
 const Hero = () => {
     const [currentIndex, setCurrentIndex] = useState(0);

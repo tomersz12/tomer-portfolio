@@ -1,3 +1,4 @@
+import About from '../components/About';
 import Hero from '../components/Hero';
 
 const Home = () => {
@@ -5,6 +6,7 @@ const Home = () => {
     return (
         <>
             <Hero/>
+            <About/>
         </>
     );
 };

@@ -29,7 +29,7 @@ const About = () => {
     const handleMouseLeave = () => {
         setIsHovered(false);
     };
-
+    
     return (
         <div className="about">
             <div className="about-content">
@@ -85,7 +85,7 @@ const About = () => {
                 <div className="about-button" onMouseEnter={handleHover} onMouseLeave={handleMouseLeave}>
                     <button>Why Computer Science?</button>
                 </div>
-                <div className={`button-popup ${isHovered? 'active' : ''}`}>
+                <div className={`button-popup ${isHovered? 'active' : ''}` }>
                     <p>
                     I grew up in a technology-focused household, creating with technology from a very young 
                     age, not to mention my father who is a computer scientist himself. Seeing the potential 

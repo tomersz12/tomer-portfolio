@@ -153,12 +153,10 @@ h1, h2, h3, h4, h5, h6 {
             font-size: 1.3rem;
             line-height: 1.7rem;
             width: 50vw;
-            visibility: hidden;
             pointer-events: none;
             &.active {
                 opacity: 1;
                 transform: translateY(0px);
-                visibility: visible;
             }
         }
     }  

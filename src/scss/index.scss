@@ -158,6 +158,9 @@ h1, h2, h3, h4, h5, h6 {
                 opacity: 1;
                 transform: translateY(0px);
             }
+            @media screen and (orientation: portrait) {
+                margin-top: 120vh;
+            }
         }
     }  
 }

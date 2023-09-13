@@ -205,6 +205,9 @@ h1, h2, h3, h4, h5, h6 {
                 }
                 :hover {
                     transform: scale(0.9);
+                    icon {
+                        fill: $primary;
+                    }
                 }
                 :active, :focus {
                     transform: scale(0.8) rotate(5deg);

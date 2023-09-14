@@ -20,16 +20,12 @@ const About = () => {
         }
     };
 
-    const [isHovered, setIsHovered] = useState(false);
+    const [showPopup, setshowPopup] = useState(false);
 
-    const handleHover = () => {
-        setIsHovered(true);
+    const activatePopup = () => {
+        setshowPopup(!showPopup);
     };
 
-    const handleMouseLeave = () => {
-        setIsHovered(false);
-    };
-    
     return (
         <div className="about">
             <div className="about-content">
@@ -82,10 +78,10 @@ const About = () => {
                         </p>
                     </div>
                 </div>
-                <div className="about-button" onMouseEnter={handleHover} onMouseLeave={handleMouseLeave}>
+                <div className={`about-button ${showPopup? 'active' : ''}`} onClick={activatePopup}>
                     <button>Why Computer Science?</button>
                 </div>
-                <div className={`button-popup ${isHovered? 'active' : ''}` }>
+                <div className={`button-popup ${showPopup? 'active' : ''}` }>
                     <p>
                     I grew up in a technology-focused household, creating with technology from a very young 
                     age, not to mention my father who is a computer scientist himself. Seeing the potential 

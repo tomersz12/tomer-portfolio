@@ -2,6 +2,8 @@ import { useState } from 'react';
 
 import Headshot from '../images/headshot.jpg';
 
+import { ClickAwayListener } from '@mui/base/ClickAwayListener';
+
 const About = () => {
     const [showPopup, setshowPopup] = useState(false);
 
@@ -59,6 +61,19 @@ const About = () => {
                 <div className={`about-button ${showPopup? 'active' : ''}`} onClick={activatePopup}>
                     <button>Why Computer Science?</button>
                 </div>
+                {showPopup &&
+                    <ClickAwayListener onClickAway={activatePopup}>
+                    <div className={'button-popup-false'}>
+                        <p>
+                        I grew up in a technology-focused household, creating with technology from a very young 
+                        age, not to mention my father who is a computer scientist himself. Seeing the potential 
+                        to use technology to create and enhance people’s lives, I’m motivated to make a positive 
+                        impact with technology. Pursuing a career in computer science allows me to continue 
+                        creating and innovating to reach this end.
+                        </p>
+                    </div>
+                    </ClickAwayListener>
+                }
                 <div className={`button-popup ${showPopup? 'active' : ''}` }>
                     <p>
                     I grew up in a technology-focused household, creating with technology from a very young 

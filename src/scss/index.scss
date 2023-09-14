@@ -203,30 +203,34 @@ h1, h2, h3, h4, h5, h6 {
         margin: 0 3rem;
         display: grid;
         grid-template-columns: 2fr auto;
+        align-items: center;
         width: 100%;
         .footer-links {
             display: flex;
             justify-content: left;
             align-items: center;
             flex-direction: row;
-            gap: 2rem;
+            gap: 1.5rem;
             a {
                 .icon {
-                    height: 4rem;
-                    width: auto;   
+                    color: $primary;
+                    font-size: 4.5rem;   
                     transition: all 0.3s ease-in-out;
                     @media screen and (orientation: portrait) {
-                        height: 2.5rem;
+                        font-size: 2.5rem;
                     }
                 }
-                :hover {
+            }
+            a:hover {
+                .icon {
+                    color: $accent;
                     transform: scale(0.9);
-                    icon {
-                        fill: $primary;
-                    }
                 }
-                :active, :focus {
-                    transform: scale(0.8) rotate(5deg);
+            }
+            a:focus, a:active {
+                .icon {
+                    color: $accent;
+                    transform: scale(1) rotate(5deg);
                 }
             }
         }

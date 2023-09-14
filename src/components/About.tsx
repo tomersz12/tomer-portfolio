@@ -3,23 +3,6 @@ import { useState } from 'react';
 import Headshot from '../images/headshot.jpg';
 
 const About = () => {
-    const [isGlitching, setIsGlitching] = useState(false);
-    const [glitched, setGlitched] = useState(false);
-    const [sportText, setSportText] = useState('soccer');
-
-    const handleMouseOver = () => {
-        if (!glitched) {
-            setIsGlitching(true);
-            setTimeout(() => {
-                setSportText('football');
-                setTimeout(() => {
-                    setIsGlitching(false);
-                    setGlitched(true);
-                }, 250);
-            }, 250);
-        }
-    };
-
     const [showPopup, setshowPopup] = useState(false);
 
     const activatePopup = () => {
@@ -36,20 +19,20 @@ const About = () => {
                     </div>
                     <div className="about-text">
                         <p>
-                            In all aspects of life, I am a <span className="color">complex</span> thinker 
+                            I am a <span className="color">complex</span> thinker 
                             and <span className="color">creative</span> problem solver.
-                            I analyze problems to their completion and 
-                            always try to find <span className="color">out of the box</span> solutions.
+                            I analyze solutions to their completion and 
+                            always try to find <span className="color">out of the box</span> solves as well.
                             I'm a fast learner, especially when it comes to
                             approaching new technologies.
                             My strongest traits for this are 
-                            my <span className="color">proactivity</span> and <span className="color">adaptability</span>,
+                            my <span className="color">proactivity</span> and <span className="color">adaptability</span>.
                             I always try to be one step ahead and I'm always ready to change my approach 
                             if it's not working. 
                             <br/><br/>
                             I am 
-                            a <span className="color">team player</span> and a <span className="color">leader</span>. 
-                            I always strive towards the collective good of my teams, and communities. 
+                            a <span className="color">leader</span> and a <span className="color">team player</span>. 
+                            I always strive towards the collective good of my teams and communities. 
                             I love to volunteer my time to help others, 
                             having always volunteered within my local communities. 
                             I persistently seek positions of leadership 
@@ -62,11 +45,6 @@ const About = () => {
                             come to life, regardless if they're someone else's or my own. 
                             The <span className="color">creative</span> process fascinates me 
                             and I always try to find new ways to create.
-                            I also have less imaginative interests such 
-                            as <span className="color">finance</span> and <span className="color">philosophy</span>. 
-                            I also 
-                            love <span className={`${isGlitching ? 'glitch' : ''}`} onMouseOver={handleMouseOver}>{sportText}</span>, 
-                            having played it and supported FC Barcelona most of my life.
                             <br/><br/>
                             I have an <span className="color">optimistic</span> worldview and believe 
                             that the right way to live is with <span className="color">confidence</span> that 

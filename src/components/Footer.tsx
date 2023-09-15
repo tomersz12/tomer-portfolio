@@ -28,7 +28,7 @@ const Footer = () => {
                             <YouTubeIcon className="icon"/>
                         </a>
                     </div>
-                    <p>&copy; 2023 Tomer Szulsztein</p>
+                    <p>&copy; 2023 Tomer Szulsztein - <a href="/legal">Legal</a></p>
                 </div>
             </div>
         </>

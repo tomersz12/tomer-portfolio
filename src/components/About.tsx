@@ -65,23 +65,25 @@ const About = () => {
                     <ClickAwayListener onClickAway={activatePopup}>
                     <div className={'button-popup-false'}>
                         <p>
-                        I grew up in a technology-focused household, creating with technology from a very young 
-                        age, not to mention my father who is a computer scientist himself. Seeing the potential 
-                        to use technology to create and enhance people’s lives, I’m motivated to make a positive 
+                        I grew up in a technology filled household, creating with technology from a very young 
+                        age. My dad, who is a computer scientist, was my primary influence in this regard. Seeing the potential 
+                        to use technology to create, and enhance people’s lives, motivates me to make a positive 
                         impact with technology. Pursuing a career in computer science allows me to continue 
                         creating and innovating to reach this end.
                         </p>
+                        <p className="disclaimer">Click anywhere to close.</p>
                     </div>
                     </ClickAwayListener>
                 }
                 <div className={`button-popup ${showPopup? 'active' : ''}` }>
                     <p>
-                    I grew up in a technology-focused household, creating with technology from a very young 
-                    age, not to mention my father who is a computer scientist himself. Seeing the potential 
-                    to use technology to create and enhance people’s lives, I’m motivated to make a positive 
+                    I grew up in a technology filled household, creating with technology from a very young 
+                    age. My dad, who is a computer scientist, was my primary influence in this regard. Seeing the potential 
+                    to use technology to create, and enhance people’s lives, motivates me to make a positive 
                     impact with technology. Pursuing a career in computer science allows me to continue 
                     creating and innovating to reach this end.
                     </p>
+                    <p className="disclaimer">Click anywhere to close.</p>
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
-import Resume from '../files/TomerSzulszteinResume_Sep07-2023.pdf';
+import Resume from '../files/TomerSzulszteinResume_Sep19-2023.pdf';
 
 const Footer = () => {
     return (
@@ -28,7 +28,8 @@ const Footer = () => {
                             <YouTubeIcon className="icon"/>
                         </a>
                     </div>
-                    <p>&copy; 2023 Tomer Szulsztein - <a href="/legal">Legal</a></p>
+                    <p>&copy; 2023 Tomer Szulsztein </p> 
+                    {/* - <a href="/legal">Legal</a> */}
                 </div>
             </div>
         </>

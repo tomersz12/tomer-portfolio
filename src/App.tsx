@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      <Router basename='https://tomerszulsztein.com/'>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/legal" element={<Legal />} />

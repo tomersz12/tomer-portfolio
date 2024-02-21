@@ -19,7 +19,7 @@ const About = () => {
                         This space will serve as a platform to share my thoughts and experiences, reflecting my enthusiasm for my various interests and a celebration of the art of creation. 
                         Whether it's discussing the latest movies, expressing my thoughts through writing, or sharing my travel experiences, I'm excited to have a place to do so.
                         <br/><br/>
-                        Currently, I work as a software developer and am pursuing a degree in Computer Science. 
+                        I currently work as a software developer and am pursuing a degree in Computer Science. 
                         I'm passionate about learning new technologies and staying abreast of the ever-changing world of computing.                       
                         </p>
                     </div>

@@ -226,6 +226,7 @@ h1, h2, h3, h4, h5, h6 {
             }
             p {
                 margin: 0;
+                text-align: center;
             }
         }
     }
@@ -293,6 +294,15 @@ h1, h2, h3, h4, h5, h6 {
     }
     @media (orientation: portrait) {
         padding: 2vh 7.5vw;
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.2rem;
+        }
+        p {
+            font-size: 1rem;
+        }
         ul {
             margin-left: 1.5rem;
         }

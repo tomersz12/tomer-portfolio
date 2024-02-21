@@ -134,6 +134,13 @@ h1, h2, h3, h4, h5, h6 {
                     display: grid;
                     place-items: center;
                 }
+                .about-text {
+                    p {
+                        width: 80vw;
+                        font-size: 1.2rem;
+                        line-height: 1.5rem;
+                    }
+                }
             }
         }
     }  

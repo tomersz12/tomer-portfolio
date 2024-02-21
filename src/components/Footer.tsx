@@ -1,10 +1,10 @@
 import EmailIcon from '@mui/icons-material/Email';
-import DescriptionIcon from '@mui/icons-material/Description';
-import GitHubIcon from '@mui/icons-material/GitHub';
+// import DescriptionIcon from '@mui/icons-material/Description';
+// import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
-import Resume from '../files/TomerSzulszteinResume_Sep19-2023.pdf';
+// import Resume from '../files/TomerSzulszteinResume_Sep19-2023.pdf';
 
 const Footer = () => {
     return (
@@ -12,15 +12,15 @@ const Footer = () => {
             <div className="footer">
                 <div className="footer-content">
                     <div className="footer-links">
-                        <a href={'mailto:tomeruchisz@gmail.com'} title="Email Me" target="_blank">
+                        <a href={'mailto:tomerszulsztein@gmail.com'} title="Email Me" target="_blank">
                             <EmailIcon className="icon"/>
                         </a>
-                        <a href={Resume} target="_blank">
+                        {/* <a href={Resume} target="_blank">
                             <DescriptionIcon className="icon"/>
-                        </a>
-                        <a href="https://github.com/tomersz12" target="_blank">
+                        </a> */}
+                        {/* <a href="https://github.com/tomersz12" target="_blank">
                             <GitHubIcon className="icon"/>
-                        </a>
+                        </a> */}
                         <a href="https://www.linkedin.com/in/tomersz12/" target="_blank">
                             <LinkedInIcon className="icon"/>
                         </a>
@@ -28,8 +28,8 @@ const Footer = () => {
                             <YouTubeIcon className="icon"/>
                         </a>
                     </div>
-                    <p>&copy; 2023 Tomer Szulsztein </p> 
-                    {/* - <a href="/legal">Legal</a> */}
+                    <p>&copy; 2024 Tomer Szulsztein 
+                    - <a href="/legal">Legal</a> </p>
                 </div>
             </div>
         </>

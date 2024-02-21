@@ -3,20 +3,15 @@ import { useState, useEffect, useRef } from 'react';
 const interests = [
     "Creating",
     "Learning",
-    "Making a difference",
     "Writing",
     "Traveling",
     "Cinema",
-	"Volunteering",
     "Programming",
     "Soccer",
     "Comic books",
-	"Event Planning",
     "Doing things my way",
 	"Accounting",
-    "Board games",
     "Video editing",
-    "Sushi",
     "Philosophy",
 ].sort(() => Math.random() - 0.5);
 
@@ -95,7 +90,7 @@ const Hero = () => {
                 <div id="left-side" className="side" ref={leftSideRef}>
                     <div className="side-text">
                         <h1>
-                            I like 
+                            I like
                             <br/>
                             <span className="fancy">{currentInterest.slice(0, currentLetterIndex)}</span>.
                         </h1>

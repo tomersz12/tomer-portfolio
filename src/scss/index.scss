@@ -120,8 +120,8 @@ h1, h2, h3, h4, h5, h6 {
                 p {
                     margin: 0;
                     width: 65vw;
-                    font-size: 1.3rem;
-                    line-height: 1.7rem;
+                    font-size: 1.5rem;
+                    line-height: 1.8rem;
                     .color {
                         color: $primary;
                     }
@@ -135,78 +135,6 @@ h1, h2, h3, h4, h5, h6 {
                     place-items: center;
                 }
             }
-        }
-        .about-button {
-            margin-top: 3rem;
-            display: grid;
-            place-items: center;
-            button {
-                background: radial-gradient(ellipse at center, $primary 20%, $accent 80%);
-                border: none;
-                border-radius: 1rem;
-                padding: .75rem 1.5rem;
-                font-size: 1.1rem;
-                color: $background;
-                transition: all 0.3s ease-in-out;
-                font-family: $header-font;
-                opacity: 0.9;
-                cursor: pointer;
-            }
-            :hover {
-                opacity: 0.58;
-            }
-            &.active {
-                button {
-                    opacity: 1;
-                    box-shadow: 0px 0px 1rem 0px $accent;
-                }
-            }   
-        }
-        .button-popup {
-            p {
-                margin: 1rem;
-            }
-            position: absolute;
-            background: $accent;
-            transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-            transform: translateY(15rem);
-            opacity: 0;
-            border: $primary 0.25rem solid;
-            border-radius: 1rem;
-            padding: 1rem 2rem;
-            font-size: 1.3rem;
-            line-height: 1.7rem;
-            width: 50vw;
-            pointer-events: none;
-            @media screen and (orientation: portrait) {
-                margin-top: 75rem;
-            }
-            &.active {
-                opacity: 1;
-                transform: translateY(0px);
-                pointer-events: all;
-            } 
-        }
-        .button-popup-false {
-            position: absolute;
-            opacity: 0;
-            border: $primary 0.25rem solid;
-            border-radius: 1rem;
-            padding: 1rem 2rem;
-            font-size: 1.3rem;
-            line-height: 1.7rem;
-            width: 50vw;
-            pointer-events: none;
-            @media screen and (orientation: portrait) {
-                margin-top: 75rem;
-            }
-            &.active {
-                pointer-events: all;
-            }
-        }
-        .disclaimer {
-            color: $secondary;
-            text-align: center;
         }
     }  
 }
@@ -316,11 +244,15 @@ h1, h2, h3, h4, h5, h6 {
         animation: fadeIn 0.5s linear;
         box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem $secondary;
     }
-    a:active {
+    a:hover {
         .icon {
             color: $text;
-            transform: scale(0.9);
             box-shadow: 0px 0px 1rem 0px $accent;
+        }
+    }
+    a:active {
+        .icon {
+            transform: scale(0.9);
         }
     }
     h1 {

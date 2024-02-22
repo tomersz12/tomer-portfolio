@@ -11,7 +11,7 @@ const Blog = () => {
             <a href={'/'} title="Home" className='icons'>
                 <HomeIcon className="icon"/>
             </a>
-            <ArticlePreviewer id={articles[0]}/>
+            <ArticlePreviewer id={articles[articles.length]}/>
         </div>
         <Footer/>
         </>

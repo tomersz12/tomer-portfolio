@@ -1,15 +1,17 @@
 import About from '../components/About';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
-// import Projects from '../components/Projects';
+import '../scss/home.scss';
 
 const Home = () => {
 
     return (
         <>
             <Hero/>
+            <a href={'./blog'} title="Blog" className='home-link'>
+                <p>View my articles</p>
+            </a>
             <About/>
-            {/* <Projects/> */}
             <Footer/>
         </>
     );

@@ -1,14 +1,20 @@
 import Footer from "../components/Footer";
 
 import HomeIcon from '@mui/icons-material/Home';
+import FeedIcon from '@mui/icons-material/Feed';
 
 const Legal = () => {
     return (
         <>
             <div className="legal">
-                <a href={'./'} title="Home">
-                    <HomeIcon className="icon"/>
-                </a>
+                <div className="icons">
+                    <a href={'./blog'} title="Blog">
+                        <FeedIcon className="icon"/>
+                    </a>
+                    <a href={'./'} title="Home">
+                        <HomeIcon className="icon"/>
+                    </a>
+                </div>
                 <h1>Legal</h1>
                 <h2>Interpretation</h2>
                 <p>

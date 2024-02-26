@@ -7,7 +7,7 @@ import Footer from './Footer.tsx';
 import ReactMarkdown from 'react-markdown';
 import ArticleHeader from './ArticleHeader.tsx';
 import { handleArticle } from '../hooks/ArticleHandler.ts';
-import ArticlePreviewer from './ArticlePreviewer.tsx';
+// import ArticlePreviewer from './ArticlePreviewer.tsx';
 
 const Article = () => {
     const { id } = useParams<{ id: string }>();

@@ -48,7 +48,7 @@ const Article = () => {
                         <div className='content'>
                             <ReactMarkdown>{articleData.content}</ReactMarkdown>
                         </div>
-                        <ArticlePreviewer id={id || ""}/>
+                        {/* <ArticlePreviewer id={id || ""}/> */}
                     </div>
                     <Footer/>
                 </>

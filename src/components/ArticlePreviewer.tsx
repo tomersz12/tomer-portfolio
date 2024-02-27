@@ -1,52 +1,60 @@
 import { useEffect, useState } from "react";
-import { fetchRelatedArticle, fetchRecentArticle, fetchRandomArticle } from "../hooks/ArticleHandler";
+
+type ArticleType = { metadata: any; content: string; imgBlob: any; id: string };
 
 interface ArticlePreviwerProps {
-    id: string;
+    articles: { [id: string]: ArticleType };
+    id: string | null;
 }
 
-const ArticlePreviewer: React.FC<ArticlePreviwerProps> = ({ id }) => {
-    const [relatedArticle, setRelatedArticle] = useState<{ metadata: any; content: string; imgBlob: any; id: string } | null>(null);
-    const [recentArticle, setRecentArticle] = useState<{ metadata: any; content: string; imgBlob: any; id: string } | null>(null);
-    const [randomArticle, setRandomArticle] = useState<{ metadata: any; content: string; imgBlob: any; id: string } | null>(null);
+const ArticlePreviewer: React.FC<ArticlePreviwerProps> = ({ articles, id }) => {
+    const [recentArticle, setRecentArticle] = useState<ArticleType | null>(null);
+    const [secondRecentArticle, setSecondRecentArticle] = useState<ArticleType | null>(null);
+    const [thirdRecentArticle, setThirdRecentArticle] = useState<ArticleType | null>(null);
+
+    if (articles === undefined || !id) {
+        return null;
+    }
+
+    const fetchArticles = () => {
+        let currentArticle = id ? articles[id] : null;
+
+        const articleKeys = Object.keys(articles);
+
+        const fetchedRecentArticles = articleKeys
+            .filter(key => articles[key].id !== currentArticle?.id)
+            .map(key => articles[key])
+            .slice(0, 3);
+
+        setRecentArticle(fetchedRecentArticles[0] || null);
+        setSecondRecentArticle(fetchedRecentArticles[1] || null);
+        setThirdRecentArticle(fetchedRecentArticles[2] || null);
+
+    };
 
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const fetchedRelatedArticle = await fetchRelatedArticle(id);
-                const fetchedRecentArticle = await fetchRecentArticle([id, fetchedRelatedArticle.id]);
-                const fetchedRandomArticle = await fetchRandomArticle([id, fetchedRelatedArticle.id, fetchedRecentArticle.id]);
+        fetchArticles();
+    }, []);
 
-                setRelatedArticle(fetchedRelatedArticle);
-                setRecentArticle(fetchedRecentArticle);
-                setRandomArticle(fetchedRandomArticle);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        };
-
-        fetchData();
-    }, [id]);
-
-    if (!relatedArticle || !recentArticle || !randomArticle) {
+    if (!recentArticle || !secondRecentArticle || !thirdRecentArticle) {
         return null;
     }
 
     return (
         <div className="article-previewer">
-            <div className="preview-article" onClick={() => window.location.href = '/blog/'+relatedArticle.id}>
-                <img src={URL.createObjectURL(relatedArticle.imgBlob)} alt={relatedArticle.metadata.title} />
-                <h3>{relatedArticle.metadata.title}</h3>
-            </div>
-
             <div className="preview-article" onClick={() => window.location.href = '/blog/'+recentArticle.id}>
                 <img src={URL.createObjectURL(recentArticle.imgBlob)} alt={recentArticle.metadata.title} />
                 <h3>{recentArticle.metadata.title}</h3>
             </div>
 
-            <div className="preview-article" onClick={() => window.location.href = '/blog/'+randomArticle.id}>
-                <img src={URL.createObjectURL(randomArticle.imgBlob)} alt={randomArticle.metadata.title} />
-                <h3>{randomArticle.metadata.title}</h3>
+            <div className="preview-article" onClick={() => window.location.href = '/blog/'+secondRecentArticle.id}>
+                <img src={URL.createObjectURL(secondRecentArticle.imgBlob)} alt={secondRecentArticle.metadata.title} />
+                <h3>{secondRecentArticle.metadata.title}</h3>
+            </div>
+
+            <div className="preview-article" onClick={() => window.location.href = '/blog/'+thirdRecentArticle.id}>
+                <img src={URL.createObjectURL(thirdRecentArticle.imgBlob)} alt={thirdRecentArticle.metadata.title} />
+                <h3>{thirdRecentArticle.metadata.title}</h3>
             </div>
         </div>
     );

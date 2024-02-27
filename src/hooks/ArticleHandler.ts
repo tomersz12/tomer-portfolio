@@ -1,6 +1,17 @@
 import articles from '../records/articles.ts';
 
-const handleArticle = async (id: string): Promise<{ metadata: any; content: string; imgBlob: any; id: string }> => {
+type ArticleType = { metadata: any; content: string; imgBlob: any; id: string };
+
+const createArticleList = async (): Promise<{ [id: string]: ArticleType }> => {
+    let output: { [id: string]: ArticleType } = {};
+    for (let i = 0; i < articles.length; i++) {
+        let article = await handleArticle(articles[i]);
+        output[article.id] = article;
+    }
+    return output;
+}
+
+const handleArticle = async (id: string): Promise<ArticleType> => {
         const isArticle = articles.includes(String(id));
         if (!isArticle) {
             console.log('Article not found.');
@@ -27,44 +38,4 @@ const handleArticle = async (id: string): Promise<{ metadata: any; content: stri
         }
 }
 
-const fetchRelatedArticle = async (id: string): Promise<{ metadata: any; content: string; imgBlob: any; id: string }> => {
-    let currentArticle = await handleArticle(id);
-    let counter = 0;
-    
-    while (counter < articles.length) {
-        let relatedArticle = await handleArticle(articles[counter]);
-        if (currentArticle.id !== relatedArticle.id) {
-            for (let i = 0; i < currentArticle.metadata.tags.length; i++) {
-                for (let j = 0; j < relatedArticle.metadata.tags.length; j++) {
-                    if (currentArticle.metadata.tags[i] === relatedArticle.metadata.tags[j]) {
-                        return relatedArticle;
-                    }
-                }
-            }
-        }
-        counter++;
-    }
-    return { metadata: null, content: '', imgBlob: null, id: id };
-}
-
-const fetchRecentArticle = (blocked: string[]): Promise<{ metadata: any; content: string; imgBlob: any; id: string }> => {
-    let counter = 0;
-    let recentArticle = articles[counter];
-    while (blocked.includes(recentArticle) && counter < articles.length) {
-        counter++;
-        recentArticle = articles[counter];
-    }
-    return handleArticle(recentArticle);
-}
-
-const fetchRandomArticle = (blocked: string[]): Promise<{ metadata: any; content: string; imgBlob: any; id: string }> => {
-    let randomIndex = Math.floor(Math.random() * articles.length);
-    let randomArticle = articles[randomIndex];
-    while (blocked.includes(randomArticle)) {
-        randomIndex = Math.floor(Math.random() * articles.length);
-        randomArticle = articles[randomIndex];
-    }
-    return handleArticle(randomArticle);
-}
-
-export { handleArticle, fetchRelatedArticle, fetchRecentArticle, fetchRandomArticle };
+export { createArticleList };

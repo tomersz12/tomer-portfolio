@@ -1,10 +1,19 @@
 import ArticlePreviewer from "../components/ArticlePreviewer";
-import articles from '../records/articles.ts';
 import Footer from "../components/Footer";
 import '../scss/blog.scss';
 import HomeIcon from '@mui/icons-material/Home';
 
-const Blog = () => {
+type ArticleType = { metadata: any; content: string; imgBlob: any; id: string };
+
+const Blog = ({ articles } : { articles: { [id: string]: ArticleType } }) => {
+
+    if (Object.keys(articles).length === 0) {
+        return (
+            <div className='article-not-found'>
+                Loading...
+            </div>
+        );
+    }
 
     return (
         <>
@@ -12,7 +21,7 @@ const Blog = () => {
             <a href={'/'} title="Home" className='icons'>
                 <HomeIcon className="icon"/>
             </a>
-            <ArticlePreviewer id={articles[articles.length-1]}/>
+            <ArticlePreviewer articles={articles} id={'placeholder-article2'}/>
         </div>
         <Footer/>
         </>

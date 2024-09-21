@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
+import './Hero.scss';
 
 const interests = [
+    "Board games",
     "Creating",
     "Learning",
     "Writing",
@@ -9,7 +11,8 @@ const interests = [
     "Programming",
     "Soccer",
     "Comic books",
-    "Doing things my way",
+	"Event Planning",
+    "Volunteering",
 	"Accounting",
     "Video editing",
     "Philosophy",
@@ -17,7 +20,6 @@ const interests = [
 
 const Hero = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [currentInterest, setCurrentInterest] = useState(interests[0]);
     const [currentLetterIndex, setCurrentLetterIndex] = useState(0);
     const [isReversing, setIsReversing] = useState(false);
     const leftSideRef = useRef<HTMLDivElement>(null);
@@ -52,10 +54,6 @@ const Hero = () => {
         }
 
     }, [currentLetterIndex, currentIndex, isReversing]);
-
-    useEffect(() => {
-        setCurrentInterest(interests[currentIndex]);
-    }, [currentIndex]);
 
     const handleOnMove = (e: MouseEvent | TouchEvent) => {
         const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
@@ -92,7 +90,7 @@ const Hero = () => {
                         <h1>
                             I like
                             <br/>
-                            <span className="fancy">{currentInterest.slice(0, currentLetterIndex)}</span>.
+                            <span className="fancy">{interests[currentIndex].slice(0, currentLetterIndex)}</span>.
                         </h1>
                     </div>
                 </div>

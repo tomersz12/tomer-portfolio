@@ -1,0 +1,70 @@
+@import '../../index.scss';
+
+.footer {
+    background-color: $secondary;
+    color: $text;
+    font-family: $body-font;
+    height: calc(4rem + 2.5vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .footer-content {
+        margin: 0 3rem;
+        display: grid;
+        grid-template-columns: 2fr auto;
+        align-items: center;
+        width: 100%;
+        .footer-links {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            flex-direction: row;
+            gap: 2rem;
+            a {
+                .icon {
+                    color: $primary;
+                    font-size: 4.5rem;   
+                    transition: all 0.3s ease-in-out;
+                    @media screen and (orientation: portrait) {
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+            a:hover {
+                .icon {
+                    color: $accent;
+                    transform: scale(1.5);
+                }
+            }
+        }
+        p {
+            font-size: 2rem;
+            text-align: right;
+            a {
+                color: $primary;
+                text-decoration: none;
+                &:hover {
+                    color: $accent;
+                }
+            }
+            @media screen and (orientation: portrait) {
+                font-size: 1rem;
+            }
+        }
+        @media screen and (orientation: portrait) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .footer-links {
+                margin-bottom: .5rem;
+            }
+            p {
+                margin: 0;
+            }
+        }
+    }
+    @media screen and (orientation: portrait) {
+        height: calc(4rem + 7.5vh);
+    }
+}

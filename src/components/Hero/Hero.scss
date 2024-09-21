@@ -1,0 +1,42 @@
+@import '../../index.scss';
+
+.hero {
+    height: 85vh;
+    bottom: 0;
+    top: 0;
+    .side {
+        bottom: 0;
+        top: 0;
+        height: 85vh;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        position: absolute;
+        .side-text {
+            font-size: 3vw;
+            margin: 0px 25vw;
+            width: 75vw;
+            .fancy {
+                font-family: $fancy-font;
+                font-size: 5vw;
+            }
+        }
+    }
+    #left-side {
+        background: linear-gradient(135deg, $primary, $accent);
+        z-index: 2;
+        .fancy {
+            color: $secondary;
+        }
+    }
+    #right-side {
+        background-color: $secondary;
+        .fancy {
+            background-image: linear-gradient(135deg, $accent, $primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    }
+}

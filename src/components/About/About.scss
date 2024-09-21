@@ -1,0 +1,65 @@
+@import '../../index.scss';
+
+.about {
+    h1 {
+        font-size: 2.5rem;
+    }
+    background-color: $background;
+    width: 100%;
+    margin: 5vh 0;
+    .about-content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .about-body {
+            margin-top: 5vh;
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 5rem;
+            .about-image {
+                position: relative;
+                img {
+                    height: 15rem;
+                    width: auto;
+                    transition: all 0.3s ease-in-out;
+                    border-radius: 33%;
+                }
+                :hover {
+                    transform: scale(1.4);
+                    border-radius: 1rem;
+                }
+            }
+            .about-text {
+                p {
+                    margin: 0;
+                    width: 65vw;
+                    font-size: 2rem;
+                    line-height: 2.75rem;
+                    .color {
+                        color: $primary;
+                    }
+                }
+            }
+            @media screen and (orientation: portrait) {
+                display: flex;
+                flex-direction: column;
+                gap: 2.5rem;
+                .about-image {
+                    display: grid;
+                    place-items: center;
+                    :hover {
+                        transform: scale(1);
+                        border-radius: 33%;
+                    }
+                }
+                .about-text {
+                    p {
+                        width: 90vw;
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                    }
+                }
+            }
+        }
+    }  
+}

@@ -4,7 +4,9 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
-import Resume from '../files/TomerSzulszteinResume_Sep19-2023.pdf';
+import Resume from '../../files/TomerSzulszteinResume_Sep21-2024.pdf';
+
+import './Footer.scss';
 
 const Footer = () => {
     return (
@@ -12,7 +14,7 @@ const Footer = () => {
             <div className="footer">
                 <div className="footer-content">
                     <div className="footer-links">
-                        <a href={'mailto:tomeruchisz@gmail.com'} title="Email Me" target="_blank">
+                        <a href={'mailto:tomerszulsztein@gmail.com'} title="Email Me" target="_blank">
                             <EmailIcon className="icon"/>
                         </a>
                         <a href={Resume} target="_blank">

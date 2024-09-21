@@ -1,0 +1,47 @@
+$text: #f2f6fc;
+$background: #020408;
+$primary: #6699fc;
+$secondary: #060c19;
+$accent: #2a5cc0;
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Familjen+Grotesk&family=Geologica:wght@500&display=swap');
+$body-font: 'Familjen Grotesk', sans-serif;
+$header-font: 'Geologica', sans-serif;
+$fancy-font: 'Bungee', cursive;
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    background-color: $background;
+    color: $text;
+    font-family: $body-font;
+    margin: 0px;
+    -ms-overflow-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: $secondary $background;
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+        background: $background;    
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: $secondary;
+        border-radius: 5px;
+        border: 1px solid $background;
+    }
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $header-font;
+    font-weight: 500;
+    margin: 0px;
+}

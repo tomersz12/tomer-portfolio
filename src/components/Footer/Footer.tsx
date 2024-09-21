@@ -17,21 +17,20 @@ const Footer = () => {
                         <a href={'mailto:tomerszulsztein@gmail.com'} title="Email Me" target="_blank">
                             <EmailIcon className="icon"/>
                         </a>
-                        <a href={Resume} target="_blank">
+                        <a href={Resume} title="Resume" target="_blank">
                             <DescriptionIcon className="icon"/>
                         </a>
-                        <a href="https://github.com/tomersz12" target="_blank">
+                        <a href="https://github.com/tomersz12" title="GitHub" target="_blank">
                             <GitHubIcon className="icon"/>
                         </a>
-                        <a href="https://www.linkedin.com/in/tomersz12/" target="_blank">
+                        <a href="https://www.linkedin.com/in/tomersz12/" title="LinkedIn" target="_blank">
                             <LinkedInIcon className="icon"/>
                         </a>
-                        <a href="https://www.youtube.com/@dexil12" target="_blank">
+                        <a href="https://www.youtube.com/@dexil12" title="YouTube" target="_blank">
                             <YouTubeIcon className="icon"/>
                         </a>
                     </div>
-                    <p>&copy; 2023 Tomer Szulsztein </p> 
-                    {/* - <a href="/legal">Legal</a> */}
+                    <p>&copy; 2024 Tomer Szulsztein</p>
                 </div>
             </div>
         </>

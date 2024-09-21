@@ -2,18 +2,18 @@ import { useState, useEffect, useRef } from 'react';
 import './Hero.scss';
 
 const interests = [
+    "Board games",
     "Creating",
     "Learning",
     "Writing",
     "Traveling",
     "Cinema",
-	"Volunteering",
     "Programming",
     "Soccer",
     "Comic books",
 	"Event Planning",
+    "Volunteering",
 	"Accounting",
-    "Board games",
     "Video editing",
     "Philosophy",
 ].sort(() => Math.random() - 0.5);
@@ -88,7 +88,7 @@ const Hero = () => {
                 <div id="left-side" className="side" ref={leftSideRef}>
                     <div className="side-text">
                         <h1>
-                            I like 
+                            I like
                             <br/>
                             <span className="fancy">{interests[currentIndex].slice(0, currentLetterIndex)}</span>.
                         </h1>
